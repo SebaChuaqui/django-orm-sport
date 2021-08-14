@@ -29,6 +29,19 @@ def index(request):
     }
 	return render(request, "leagues/index.html", context)
 
+def index2(request):
+	context = {
+		"leagues": League.objects.all(),
+		"teams": Team.objects.all(),
+		"players": Player.objects.all(),
+		"consulta1": Team.objects.filter(league__name='Atlantic Soccer Conference'),
+		"consulta2": Player.objects.filter(curr_team__team_name="Penguins", curr_team__location="Boston"),
+		"consulta3": Player.objects.filter(curr_team__league__name="International Collegiate Baseball Conference"),
+		"consulta4": Player.objects.filter(curr_team__league__name="American Conference of Amateur Football").filter(last_name="Lopez"),
+		"consulta5":  Player.objects.filter(curr_team__league__sport="Football"),
+	}
+	return render(request, "leagues/index2.html", context)
+
 
 def make_data(request):
 	team_maker.gen_leagues(10)
