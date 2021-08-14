@@ -4,7 +4,7 @@
 		<title>Sports Leagues</title>
 	</head>
 	<body>
-		<h1>Consulta 1</h1>
+		<h1>Todas Las Ligas de Béisbol</h1>
 		<ol>
 			{% for league in consulta1 %}
 				<li>{{league.name}}</li>
@@ -13,7 +13,7 @@
 			{% endfor %}
 		</ol>
 
-		<h1>Consulta 2</h1>
+		<h1>Todas Las Ligas de Mujeres</h1>
 		<ol>
 			{% for league in consulta2 %}
 				<li>{{league.name}}</li>
@@ -22,7 +22,7 @@
 			{% endfor %}
 		</ol>
 
-		<h1>Consulta 3</h1>
+		<h1>Todas las ligas donde el deporte es cualquier tipo de hockey</h1>
 		<ol>
 			{% for league in consulta3 %}
 				<li>{{league.name}}</li>
@@ -31,7 +31,7 @@
 			{% endfor %}
 		</ol>
 
-		<h1>Consulta 4</h1>
+		<h1>Todas las ligas donde el deporte no sea football</h1>
 		<ol>
 			{% for league in consulta4 %}
 				<li>{{league.name}}</li>
@@ -40,7 +40,7 @@
 			{% endfor %}
 		</ol>
 
-		<h1>Consulta 5</h1>
+		<h1>Todas las ligas que se llaman "Conferencias"</h1>
 		<ol>
 			{% for league in consulta5 %}
 				<li>{{league.name}}</li>
@@ -49,7 +49,7 @@
 			{% endfor %}
 		</ol>
 
-		<h1>Consulta 6</h1>
+		<h1>Todas las ligas de la región atlántica</h1>
 		<ol>
 			{% for league in consulta6 %}
 				<li>{{league.name}}</li>
@@ -58,7 +58,7 @@
 			{% endfor %}
 		</ol>
 
-		<h1>Consulta 7</h1>
+		<h1>Todos los equipos con sede en Dallas</h1>
 		<ol>
 			{% for Team in consulta7 %}
 				<li>{{ Team.team_name }} {{Team.location}}</li>
@@ -67,7 +67,7 @@
 			{% endfor %}
 		</ol>
 
-		<h1>Consulta 8</h1>
+		<h1>Todos los equipos nombraron los Raptors</h1>
 		<ol>
 			{% for Team in consulta8 %}
 				<li>{{Team.team_name}} {{Team.location}} </li>
@@ -76,7 +76,7 @@
 			{% endfor %}
 		</ol>
 
-		<h1>Consulta 9</h1>
+		<h1>Todos los equipos cuya ubicación incluye "Ciudad"</h1>
 		<ol>
 			{% for Team in consulta9 %}
 				<li>{{ Team.team_name }} {{Team.location}}</li>
@@ -85,7 +85,7 @@
 			{% endfor %}
 		</ol>
 
-		<h1>Consulta 10</h1>
+		<h1>Todos los equipos cuyos nombres comienzan con "T"</h1>
 		<ol>
 			{% for Team in consulta10 %}
 				<li>{{Team.team_name}}</li>
@@ -94,7 +94,7 @@
 			{% endfor %}
 		</ol>
 
-		<h1>Consulta 11</h1>
+		<h1>Todos los equipos, ordenados alfabéticamente por ubicación</h1>
 		<ol>
 			{% for Team in consulta11 %}
 				<li>{{Team.team_name}} {{Team.location}}</li>
@@ -103,7 +103,7 @@
 			{% endfor %}
 		</ol>
 
-		<h1>Consulta 12</h1>
+		<h1>Todos los equipos, ordenados por nombre de equipo en orden alfabético inverso</h1>
 		<ol>
 			{% for Team in consulta12 %}
 				<li>{{Team.team_name}} {{Team.location}}</li>
@@ -112,7 +112,7 @@
 			{% endfor %}
 		</ol>
 
-		<h1>Consulta 13</h1>
+		<h1>Cada jugador con apellido "Cooper"</h1>
 		<ol>
 			{% for player in consulta13 %}
 				<li>{{player.first_name}} {{ player.last_name}}</li>
@@ -121,7 +121,7 @@
 			{% endfor %}
 		</ol>
 
-		<h1>Consulta 14</h1>
+		<h1>Cada jugador con nombre "Joshua"</h1>
 		<ol>
 			{% for player in consulta14 %}
 				<li>{{player.first_name}} {{ player.last_name}}</li>
@@ -130,7 +130,7 @@
 			{% endfor %}
 		</ol>
 
-		<h1>Consulta 15</h1>
+		<h1>Todos los jugadores con el apellido "Cooper" excepto aquellos con "Joshua" como primer nombre<h1>
 		<ol>
 			{% for player in consulta15 %}
 				<li>{{player.first_name}} {{ player.last_name}}</li>
@@ -139,7 +139,7 @@
 			{% endfor %}
 		</ol>
 
-		<h1>Consulta 16</h1>
+		<h1>Todos los jugadores con nombre "Alexander" O nombre "Wyatt"</h1>
 		<ol>
 			{% for player in consulta16 %}
 				<li>{{player.first_name}} {{ player.last_name}}</li>
