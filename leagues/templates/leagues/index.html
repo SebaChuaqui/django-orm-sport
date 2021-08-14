@@ -130,14 +130,14 @@
 			{% endfor %}
 		</ol>
 
-		<h1>Todos los jugadores con el apellido "Cooper" excepto aquellos con "Joshua" como primer nombre<h1>
+		<h1>Todos los jugadores con el apellido "Cooper" excepto aquellos con "Joshua" como primer nombre</h1>
 		<ol>
 			{% for player in consulta15 %}
 				<li>{{player.first_name}} {{ player.last_name}}</li>
 			{% empty %}
 				<p>No leagues found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
 			{% endfor %}
-		</ol>
+			</ol>
 
 		<h1>Todos los jugadores con nombre "Alexander" O nombre "Wyatt"</h1>
 		<ol>
