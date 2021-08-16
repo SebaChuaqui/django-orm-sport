@@ -113,7 +113,7 @@
 			{% endfor %}
 		</ol>
 
-		<h1>Cada jugador con apellido "Cooper"</h1>
+		<h1> Todos llamados "Joshua" que alguna vez han jugado en la Federación Atlántica de Jugadores de Béisbol Amateur</h1>
 		<ol>
 			{% for player in consulta13 %}
 				<li>{{player.first_name}} {{ player.last_name}}</li>
@@ -122,33 +122,25 @@
 			{% endfor %}
 		</ol>
 
-		<h1>Cada jugador con nombre "Joshua"</h1>
+		<h1> Todos los equipos que han tenido 12 o más jugadores, pasados y presentes.</h1>
 		<ol>
-			{% for player in consulta14 %}
-				<li>{{player.first_name}} {{ player.last_name}}</li>
+			{% for team in consulta14 %}	
+				<li>{{team.team_name}}</li>
 			{% empty %}
 				<p>No leagues found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
 			{% endfor %}
 		</ol>
 
-		<h1>Todos los jugadores con el apellido "Cooper" excepto aquellos con "Joshua" como primer nombre</h1>
+		<h1> Todos los jugadores y el número de equipos para los que jugó, ordenados por la cantidad de equipos para los que han jugado</h1>
 		<ol>
-			{% for player in consulta15 %}
-				<li>{{player.first_name}} {{ player.last_name}}</li>
-			{% empty %}
-				<p>No leagues found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
-			{% endfor %}
-			</ol>
-
-		<h1>Todos los jugadores con nombre "Alexander" O nombre "Wyatt"</h1>
-		<ol>
-			{% for player in consulta16 %}
-				<li>{{player.first_name}} {{ player.last_name}}</li>
+			{% for player in consulta15 %}	
+				<li>{{player.first_name}} {{player.last_name}} ={{player.num_teams}} </li>
 			{% empty %}
 				<p>No leagues found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
 			{% endfor %}
 		</ol>
-		
+
+
 <!-- 		<h1>Leagues</h1>
 		<ol>
 			{% for league in leagues %}

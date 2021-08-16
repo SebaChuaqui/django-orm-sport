@@ -48,6 +48,9 @@ def index2(request):
         "consulta10": Player.objects.filter(all_teams__team_name="Tiger-Cats") & Player.objects.filter(all_teams__location="Manitoba"),
         "consulta11": Player.objects.filter(all_teams__team_name="Vikings").exclude(curr_team__team_name="Vikings").filter(all_teams__location="Wichita").exclude(curr_team__location="Wichita"),
 		"consulta12" : Team.objects.filter(all_players__first_name="Jacob", all_players__last_name="Gray").exclude(curr_players__first_name="Jacob", curr_players__last_name="Gray"),
+        "consulta13" : Player.objects.filter(all_teams__league__name="Atlantic Federation of Amateur Baseball Players").filter(first_name="Joshua"),
+        "consulta14" : Team.objects.annotate(num_players=Count('all_players')).filter(num_players__gte=12),
+        "consulta15" : Player.objects.annotate(num_teams=Count('all_teams')).order_by('num_teams')
     }
     return render(request, "leagues/index2.html", context)
 
