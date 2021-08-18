@@ -4,7 +4,7 @@
 		<title>Sports Leagues</title>
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 	</head>
-	<body class="bg-danger mt-4">
+	<body class="bg-secondary text-white mt-4">
 		<div id="homebtn" class="d-flex fixed-top" >
 			<button>
 				<a class="text-dark bg-gradient-light" href="/">Ir A Sports I</a>
@@ -184,7 +184,7 @@
 			<h4 class="text-center"> Todos los equipos que han tenido 12 o más jugadores, pasados y presentes.</h4>
 			<ol>
 				{% for team in consulta14 %}	
-					<li>{{team.team_name}}</li>
+					<li>{{team.location}} {{team.team_name}} ({{team.num_players}})</li>
 				{% empty %}
 					<p>No leagues found.  Try <code>python manage.py loaddata data.json</code>, or, if that doesn't work, going <a href="{% url 'make_data' %}">here</a> (but be prepared to wait).</p>
 				{% endfor %}
